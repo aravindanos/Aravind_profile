@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState  } from "react";
+import React, { useEffect, useRef  } from "react";
 import "../App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";  
@@ -87,9 +87,14 @@ const Hero = () => {
              I am a highly motivated and results-driven Frontend Developer and Web Designer seeking a
 challenging opportunity to leverage my skills and experience in a dynamic tech environment.
             </p>
-            <a href="#projects" className="hero-btn">
+            {/* <a href="#projects" className="hero-btn">
               View My Work
-            </a>
+            </a>  */}
+<a class="cta" href="#projects">
+  <span>View My Work</span> 
+</a> 
+
+
           </div>
           <div className="hero-image-box" data-aos="zoom-in">
       <img
