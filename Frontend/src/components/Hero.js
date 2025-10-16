@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState  } from "react";
 import "../App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";  
@@ -15,6 +15,13 @@ import {
   faVideo,
   faPencilRuler,
 } from "@fortawesome/free-solid-svg-icons";
+import index from '../images/index.jpg';
+import index1 from '../images/index1.jpg';
+import index2 from '../images/index2.jpg';
+import index3 from '../images/index3.jpg';
+import index4 from '../images/index4.jpg';
+import index5 from '../images/index5.jpg';
+import index6 from '../images/index6.jpg';
 
 const Hero = () => {
   useEffect(() => {
@@ -108,22 +115,18 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
       <div className="about-grid"> 
         <div className="about-left" data-aos="fade-right">
           <h2 className="about-title">About Me</h2>
-       <p>
-  I’m a <span className="highlight">Frontend Developer</span> &
-  <span className="highlight"> Web Designer</span> with over <b>2.5 years</b> of
-  experience crafting responsive, visually engaging, and user-focused web
-  interfaces.
-</p>
 <p>
-  My expertise lies in <b>React.js</b>, <b>CSS</b>, <b>HTML</b>, <b>Figma</b>, and
-  <b> Adobe Photoshop</b>, blending creativity with functionality to design
-  immersive digital experiences.
+  I’m <b>Aravindan OS</b>, a passionate <b>Frontend Developer and Web Designer</b> with over <b>2.5+ years of professional experience</b> in crafting responsive, visually engaging, and user-friendly web applications. Currently working at <b>Ideelit Software LLP</b>, I specialize in <b>React.js</b>, <b>CSS</b>, and <b>Photoshop</b>, focusing on building dynamic interfaces that combine creativity with functionality.
 </p>
+
 <p>
-  I’m passionate about <b>film editing</b>, <b>visual storytelling</b>, and
-  creating meaningful designs that connect emotionally with users. My approach
-  is detail-driven, collaborative, and centered on continuous learning.
+  I began my career as a <b>Web Design Trainee</b> at <b>ARM Infotech</b>, where I gained hands-on experience in <b>UI/UX design</b> and web structuring. Since then, I’ve developed and designed multiple full-fledged websites such as <b>Ideelit.com</b>, <b>123Legal.in</b>, <b>123Boek.com</b>, and <b>123Tute.com</b>, blending clean design principles with performance-driven development.
 </p>
+
+<p>
+  Beyond web development, I’m a <b>creative thinker</b> with a strong interest in <b>video editing, filmmaking, and visual storytelling</b> — skills that inspire my design approach. My work reflects a mix of <b>technical precision</b> and <b>artistic passion</b>, driven by a desire to deliver seamless digital experiences that stand out.
+</p>
+
 
         </div>
  
@@ -182,21 +185,36 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
         <div className="timeline">
           <div className="timeline-item" data-aos="fade-right">
             <h3>Frontend Developer & Web Design Head</h3>
-            <h4>Ideelit Software LLP | Oct 2023 – Present</h4>
-            <p>
-              Developing responsive React.js websites and leading UI design. I
-              ensure consistent branding, animation, and performance across
-              digital platforms.
-            </p>
+          <p>
+  <b>Ideelit Software LLP</b> — <b>October 2023 - Present</b><br />
+  Currently working as a <b>Frontend Developer and Web Design Head</b>, specializing in <b>React.js</b>, <b>CSS</b>, <b>Figma</b>, and <b>Photoshop</b>. 
+  I focus on building <b>dynamic</b>, <b>responsive</b>, and <b>visually appealing</b> web applications that deliver seamless user experiences 
+  and align with modern design trends.
+</p>
+
+
           </div>
-          <div className="timeline-item" data-aos="fade-left">
-            <h3>Web Designer Trainee</h3>
-            <h4>ARM Infotech | Jan 2023 – Jul 2023</h4>
-            <p>
-              Designed 8 website mockups using Photoshop, HTML, and CSS.
-              Strengthened UX understanding through hands-on client projects.
-            </p>
-          </div>
+        <div className="timeline-item" data-aos="fade-left">
+  <h3>Web Designer Trainee</h3>
+  <p>
+    <b>ARM Infotech</b> — <b>January 2023 - July 2023</b><br />
+    Worked as a <b>Web Designer Trainee</b>, gaining practical experience in <b>UI/UX design</b>, 
+    <b> website structuring</b>, and <b>frontend development</b>. Created more than 
+    <b> 8 website mockup designs</b> using <b>Photoshop</b>, <b>HTML</b>, and <b>CSS</b>, 
+    developing a strong foundation in web design principles and responsive layouts.
+  </p>
+ 
+  <div className="timeline-gallery">
+    <img src={index} alt="Mockup 1" />
+    <img src={index1} alt="Mockup 2" />
+    <img src={index2} alt="Mockup 3" />
+    <img src={index3} alt="Mockup 4" />
+    <img src={index4} alt="Mockup 5" />
+    <img src={index5} alt="Mockup 6" />
+    <img src={index6} alt="Mockup 7" />
+  </div>
+</div>
+
         </div>
       </section>
  
