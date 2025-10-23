@@ -223,41 +223,51 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
         </div>
       </section>
  
-      <section id="projects" className="section projects" data-aos="fade-up">
-        <h2>Featured Projects</h2>
-        <div className="project-showcase"> 
-          <div className="project-list" data-aos="fade-left">
-            <div className="project-card">
-              <h3>Ideelit.com</h3>
-              <p>
-                Full React.js website with animation layers and clean
-                responsive layout.
-              </p>
-            </div>
-            <div className="project-card">
-              <h3>123Legal.in</h3>
-              <p>
-                End-to-end web build with PDF viewer and article system. Styled
-                from Photoshop mockups.
-              </p>
-            </div>
-            <div className="project-card">
-              <h3>123Boek.com</h3>
-              <p>
-                Business platform designed and coded using React.js with
-                consistent brand UI.
-              </p>
-            </div>
-            <div className="project-card">
-              <h3>123Tute.com</h3>
-              <p>
-                Educational layout focused on reusable React components and
-                scalability.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <section id="projects" className="section projects" data-aos="fade-up">
+  <h2 className="section-title" data-aos="fade-down">Featured Projects</h2>
+
+  <div className="projects-grid">
+    <div className="project-card" data-aos="zoom-in" data-aos-delay="100">
+      <div className="project-card-inner">
+        <h3>
+          <a href="https://ideelit.com" target="_blank" rel="noopener noreferrer">
+            Ideelit.com
+          </a>
+        </h3>
+        <p>
+          Full React.js website featuring layered animations, a clean layout, and a responsive experience.
+        </p>
+      </div>
+    </div>
+
+    <div className="project-card" data-aos="zoom-in" data-aos-delay="200">
+      <div className="project-card-inner">
+        <h3>
+          <a href="https://123legal.in" target="_blank" rel="noopener noreferrer">
+            123Legal.in
+          </a>
+        </h3>
+        <p>
+          End-to-end web platform with integrated PDF viewer and article system, styled from Photoshop mockups.
+        </p>
+      </div>
+    </div> 
+
+    <div className="project-card" data-aos="zoom-in" data-aos-delay="400">
+      <div className="project-card-inner">
+        <h3>
+          <a href="https://123tute.com" target="_blank" rel="noopener noreferrer">
+            123Tute.com
+          </a>
+        </h3>
+        <p>
+          Educational React layout built with reusable components and scalable structure.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
  
       <section id="education" className="section education" data-aos="fade-up">
         <h2>Education</h2>
