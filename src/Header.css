@@ -140,3 +140,41 @@
 .nav-text {
   font-weight: 500;
 }
+
+
+
+
+
+@media only screen and (min-width: 1500px) {
+
+
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1500px) {
+
+
+}
+
+@media only screen and (max-width: 1100px ) {
+}
+
+@media only screen and (max-width: 992px ) { 
+}
+
+@media only screen and (max-width: 480px ) {
+ 
+.floating-header {
+    position: fixed;
+    top: 40px;
+    left: 45%; 
+}
+.nav-center {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+    .nav-label {
+        font-size: 12px;
+        bottom: -34px;
+    }
+}

@@ -14,6 +14,9 @@ import {
   faPaintBrush,
   faVideo,
   faPencilRuler,
+   faLocationDot,
+  faPhone,
+  faEnvelope
 } from "@fortawesome/free-solid-svg-icons";
 import index from '../images/index.jpg';
 import index1 from '../images/index1.jpg';
@@ -90,10 +93,11 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
             {/* <a href="#projects" className="hero-btn">
               View My Work
             </a>  */}
+            <div className="button-top">
 <a class="cta" href="#projects">
   <span>View My Work</span> 
 </a> 
-
+</div>
 
           </div>
           <div className="hero-image-box" data-aos="zoom-in">
@@ -297,26 +301,35 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
           <div className="contact-text">
             <h2>Let’s Collaborate</h2>
             <p>
-              I’m open to freelance and full-time opportunities in UI/UX design,
-              frontend development, and creative digital experiences.
+              I’m open to full-time opportunities in UI/UX design,
+              frontend development, and Web Designer/Developer.
             </p>
-            <ul>
-              <li>📍 Madurai, Tamil Nadu</li>
-              <li>📞 8838404104</li>
-              <li>
-                📧{" "}
-                <a href="mailto:osaravindan258@gmail.com">
-                  osaravindan258@gmail.com
-                </a>
-              </li>
-            </ul>
+           <ul className="contact-list">
+  <li>
+    <FontAwesomeIcon icon={faLocationDot} />
+    <span>Madurai, Tamil Nadu</span>
+  </li>
+
+  <li>
+    <FontAwesomeIcon icon={faPhone} />
+    <span>8838404104</span>
+  </li>
+
+  <li>
+    <FontAwesomeIcon icon={faEnvelope} />
+    <a href="mailto:osaravindan258@gmail.com">
+      osaravindan258@gmail.com
+    </a>
+  </li>
+</ul>
+
           </div>
         
         </div>
       </section> 
 
       <footer className="footer">
-        <p>© 2025 O.S. Aravindan | Designed & Developed with React.js</p>
+        <p>© 2026 O.S. Aravindan | Designed & Developed with React.js</p>
       </footer>
     </>
   );
