@@ -3,7 +3,7 @@ import "../App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";  
 import adimage from  "../images/ad.png";
-import ContactVector from  "../images/contact.png";
+import ContactVector from  "../images/aravind_img.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLightbulb,

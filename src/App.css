@@ -279,6 +279,7 @@ h1, h2, h3 {
 .about-title {
   font-size: 2.6rem;
   font-weight: 700;
+  text-align: left;
   color: #006666;
   margin-bottom: 25px;
   text-shadow: 0 2px 6px rgba(0, 128, 128, 0.1);
@@ -953,5 +954,61 @@ h1, h2, h3 {
   display: none; 
 }
 
-
+.about-title {
+    font-size: 2.6rem;
+    font-weight: 700; 
+    text-align: center;
+}
+.about-left p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+.about-card {
+    background: #ffffffb3;
+    border-radius: 18px;
+    padding: 25px 30px;
+    width: 280px;
+}
+.about-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.experience h2 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+.timeline-item h3 {
+    color: #007777;
+    font-size: 1.2rem;
+}
+    .timeline-gallery img {
+        width: 100%;
+        max-width: 230px;
+        transform: rotateY(0deg) rotateX(0deg) !important;
+    }
+    .section-title {
+    text-align: center;
+    color: #007777;
+    font-size: 1.5rem; 
+    margin-bottom: 60px; 
+}
+.contact-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px; 
+}
+    .contact-text li {
+        justify-content: left;
+    }
+    .header {
+    position: fixed;
+    bottom: 50px;
+    left: 50% !important; 
+    border-radius: 50px;
+    padding: 10px 25px;  
+}
 }
