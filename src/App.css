@@ -9,13 +9,10 @@ body {
 }
 
 section {
-  padding: 100px 10%;
+  padding: 80px 5%;
 }
 
-h1, h2, h3 {
-  margin: 0;
-  line-height: 1.2;
-}
+
  
 
 
@@ -575,7 +572,7 @@ h1, h2, h3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 40px;
-  padding: 0 10%;
+  padding: 0 5%;
 }
 
 .project-card {
@@ -916,10 +913,24 @@ h1, h2, h3 {
 }
 
 @media only screen and (max-width: 480px ) {
+.hero-image-box {
+  max-width: 100%;
+  overflow: hidden;
+}
 
-
+body {
+  margin: 0; 
+  scroll-behavior: smooth;
+  overflow-x: hidden !important;
+}
+.hero-inner {
+    gap: 0px !important;
+    z-index: 2;
+    width: 100%;
+    max-width: 380px;
+}
 .hero {
-  height: 65vh;
+  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -949,10 +960,12 @@ h1, h2, h3 {
     text-align: center;
 
 }
-
-.hero-image-box { 
-  display: none; 
-}
+.hero-image {
+       display: none;
+    }
+    .info-card {
+        display: none;
+    }
 
 .about-title {
     font-size: 2.6rem;
@@ -963,12 +976,12 @@ h1, h2, h3 {
     line-height: 1.8;
     margin-bottom: 15px;
     font-size: 1rem;
-}
+} 
 .about-card {
     background: #ffffffb3;
     border-radius: 18px;
     padding: 25px 30px;
-    width: 280px;
+    width: 320px; 
 }
 .about-card h4 {
     font-size: 1.3rem;

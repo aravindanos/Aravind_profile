@@ -89,10 +89,7 @@ const Hero = () => {
             <p>
              I am a highly motivated and results-driven Frontend Developer and Web Designer seeking a
 challenging opportunity to leverage my skills and experience in a dynamic tech environment.
-            </p>
-            {/* <a href="#projects" className="hero-btn">
-              View My Work
-            </a>  */}
+            </p> 
             <div className="button-top">
 <a class="cta" href="#projects">
   <span>View My Work</span> 

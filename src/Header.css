@@ -166,7 +166,7 @@
 .floating-header {
     position: fixed;
     top: 40px;
-    left: 45%; 
+    left: 50%; 
 }
 .nav-center {
     display: flex;
