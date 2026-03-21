@@ -13,7 +13,7 @@ import {
   faCode,
   faPaintBrush,
   faVideo, 
-   faLocationDot,
+  faLocationDot,
   faPhone,
   faEnvelope
 } from "@fortawesome/free-solid-svg-icons"; 
@@ -47,7 +47,6 @@ const Hero = () => {
 ];
 
  const imageRef = useRef(null);
-
   const handleMouseMove = (e) => {
     const card = imageRef.current;
     const rect = card.getBoundingClientRect();
@@ -62,19 +61,15 @@ const Hero = () => {
 
     card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
   };
-
   const handleMouseLeave = () => {
     const card = imageRef.current;
     card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
   };
-
   return (
     <> 
       <section className="hero" id="home">
         <div className="hero-overlay"></div>
         <div className="hero-inner" data-aos="fade-up"> 
-   
-
           <div className="hero-content">
             <h1>O.S. Aravindan</h1>
             <h2>Frontend Developer & Web Designer</h2>
@@ -87,7 +82,6 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
   <span>Explore My Projects</span> 
 </a> 
 </div>
-
           </div>
           <div className="hero-image-box" data-aos="fade-up">
       <img
@@ -98,7 +92,6 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
       />
-
       {heroCards.map((card) => (
         <div key={card.id} className={`info-card card-${card.id}`}>
           <h3>{card.title}</h3>
@@ -107,7 +100,6 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
       ))}
     </div>
         </div>
-        
       </section>
  
     <section id="about" className="section about" data-aos="fade-up">
@@ -125,8 +117,6 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
 <p>
   Beyond web development, I’m a <b>creative thinker</b> with a strong interest in <b>video editing, filmmaking, and visual storytelling</b> — skills that inspire my design approach. My work reflects a mix of <b>technical precision</b> and <b>artistic passion</b>, driven by a desire to deliver seamless digital experiences that stand out.
 </p>
-
-
         </div>
  
         <div className="about-right" data-aos="fade-up">
@@ -177,19 +167,15 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
  
     <section id="experience" className="section experience" data-aos="fade-up">
   <h2>Experience</h2>
-
   <div className="timeline">
- 
     <div className="timeline-item" data-aos="fade-up">
       <h3>Web Designer & Frontend Developer</h3>
       <p>
         <b>Ideelit Software LLP</b> — <b>October 2023 - January 2026</b><br /><br />
-
         Leading the <b>Frontend & Web Design team</b> and delivering modern,
         scalable, and visually refined interfaces using 
         <b> React.js, CSS, Figma, Photoshop.</b>
         <br /><br />
-
         <b>Key Contributions:</b><br />
         • Designed and developed complete UI systems for <b>Ideelit.com</b>, improving brand visibility.<br />
         • Built <b>modular, reusable React components</b> used across multiple company projects.<br />
@@ -204,31 +190,26 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
       <h3>Web Designer Trainee</h3>
       <p>
         <b>ARM Infotech</b> — <b>January 2023 - July 2023</b><br /><br />
-
         Started my career as a <b>Web Designer Trainee</b>, learning the foundations of
         UI/UX, web design workflows, wireframing, and responsive page structures.
         <br /><br />
-
         <b>Responsibilities:</b><br />
         • Designed over <b>8 complete website mockups</b> in Photoshop.<br />
         • Created clean, responsive HTML/CSS templates.<br />
         • Learned user-centric design, layout balance, typography, and color theory.<br />
         • Collaborated with developers to convert designs into functional pages.<br />
         • Implemented basic animations, hover effects, and layout enhancements.<br /><br />
-
         <b>Skills Gained:</b><br />
         • Strong understanding of UI/UX principles.<br />
         • Improved design-to-development conversion workflow.<br />
         • Foundation in responsive design, grid systems, and branding consistency.
       </p>
     </div>
-
   </div>
 </section>
  
     <section id="projects" className="section projects" data-aos="fade-up">
   <h2 className="section-title" data-aos="fade-down">Featured Projects</h2>
-
   <div className="projects-grid">
     <div className="project-card" data-aos="fade-up" data-aos-delay="100">
       <div className="project-card-inner">
@@ -323,7 +304,6 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
   </li>
 </ul>
           </div>
-        
         </div>
       </section> 
 
