@@ -17,14 +17,7 @@ import {
    faLocationDot,
   faPhone,
   faEnvelope
-} from "@fortawesome/free-solid-svg-icons";
-import index from '../images/index.jpg';
-import index1 from '../images/index1.jpg';
-import index2 from '../images/index2.jpg';
-import index3 from '../images/index3.jpg';
-import index4 from '../images/index4.jpg';
-import index5 from '../images/index5.jpg';
-import index6 from '../images/index6.jpg';
+} from "@fortawesome/free-solid-svg-icons"; 
 
 const Hero = () => {
   useEffect(() => {
