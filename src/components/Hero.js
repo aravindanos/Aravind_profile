@@ -12,8 +12,7 @@ import {
   faCubes,
   faCode,
   faPaintBrush,
-  faVideo,
-  faPencilRuler,
+  faVideo, 
    faLocationDot,
   faPhone,
   faEnvelope
