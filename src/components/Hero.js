@@ -1,8 +1,9 @@
-import React, { useEffect, useRef  } from "react";
+import React, { useEffect, useRef, useState  } from "react";
 import "../App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";  
 import adimage from  "../images/ad.png";
+import advideo from  "../images/ad_typing.mp4";
 import ContactVector from  "../images/aravind_img.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -15,13 +16,36 @@ import {
   faVideo, 
   faLocationDot,
   faPhone,
-  faEnvelope
+  faEnvelope,
+  faArrowUp 
 } from "@fortawesome/free-solid-svg-icons"; 
 
 const Hero = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
+
+  const [showTopBtn, setShowTopBtn] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > 400) {
+      setShowTopBtn(true);
+    } else {
+      setShowTopBtn(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+  return () => window.removeEventListener("scroll", handleScroll);
+}, []);
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
 
   const heroCards = [
   {
@@ -185,8 +209,10 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
         • Converted Figma & Photoshop mockups into pixel-perfect production UI.<br /><br />
       </p>
     </div>
- 
+
     <div className="timeline-item" data-aos="fade-up">
+      <div className='timeline-in'>
+        <div>
       <h3>Web Designer Trainee</h3>
       <p>
         <b>ARM Infotech</b> — <b>January 2023 - July 2023</b><br /><br />
@@ -205,6 +231,17 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
         • Foundation in responsive design, grid systems, and branding consistency.
       </p>
     </div>
+     <video
+  ref={imageRef}
+  className="hero-video"
+  src={advideo}
+  autoPlay
+  loop
+  muted
+  playsInline 
+/>
+</div>
+</div>
   </div>
 </section>
  
@@ -306,7 +343,11 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
           </div>
         </div>
       </section> 
-
+{showTopBtn && (
+  <div className="scroll-top" onClick={scrollToTop}>
+    <FontAwesomeIcon icon={faArrowUp} />
+  </div>
+)}
       <footer className="footer">
         <p>© 2026 O.S. Aravindan | Designed & Developed with React.js</p>
       </footer>
