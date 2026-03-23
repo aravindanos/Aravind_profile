@@ -108,14 +108,26 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
 </div>
           </div>
           <div className="hero-image-box" data-aos="fade-up">
-      <img
-        ref={imageRef}
-        src={adimage}
-        alt="Designer vector"
-        className="hero-image"
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-      />
+<div className="hero-wrapper">
+  <img
+    ref={imageRef}
+    src={adimage}
+    alt="Designer vector"
+    className="hero-image"
+    onMouseMove={handleMouseMove}
+    onMouseLeave={handleMouseLeave}
+  />
+ 
+  <span className="floating floating-1"></span>
+  <span className="floating floating-2"></span>
+  <span className="floating floating-3"></span>
+ 
+  <span className="vector square"></span>
+  <span className="vector triangle"></span>
+  <span className="vector ring"></span>
+  <span className="vector dot"></span>
+  <div className="orbit"></div>
+</div>
       {heroCards.map((card) => (
         <div key={card.id} className={`info-card card-${card.id}`}>
           <h3>{card.title}</h3>
@@ -244,7 +256,7 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
 </div>
   </div>
 </section>
- 
+ <div className="projects-bg">
     <section id="projects" className="section projects" data-aos="fade-up">
   <h2 className="section-title" data-aos="fade-down">Featured Projects</h2>
   <div className="projects-grid">
@@ -309,7 +321,7 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
           </div>
         </div>
       </section>
-  
+  </div>
       <section id="contact" className="section contact" data-aos="fade-up">
         <div className="contact-grid">
             <div className="contact-vector" data-aos="fade-up">
