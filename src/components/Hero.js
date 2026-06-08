@@ -207,7 +207,7 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
     <div className="timeline-item" data-aos="fade-up">
       <h3>Web Designer & Frontend Developer</h3>
       <p>
-        <b>Ideelit Software LLP</b> — <b>October 2023 - January 2026</b><br /><br />
+        <b>Ideelit Software LLP</b> — <b>October 2023 - May 2026</b><br /><br />
         Leading the <b>Frontend & Web Design team</b> and delivering modern,
         scalable, and visually refined interfaces using 
         <b> React.js, CSS, Figma, Photoshop.</b>
@@ -268,7 +268,7 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
           </a>
         </h3>
         <p>
-          Full React.js website featuring layered animations, a clean layout, and a responsive experience.
+          Full React.js website featuring layered animations, a clean layout, and a responsive experience. 
         </p>
       </div>
     </div>
