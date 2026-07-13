@@ -3,17 +3,9 @@ import "../App.css";
 import AOS from "aos";
 import "aos/dist/aos.css";  
 import adimage from  "../images/ad.png";
-import advideo from  "../images/ad_typing.mp4";
 import ContactVector from  "../images/aravind_img.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLightbulb,
-  faUsers,
-  faClock,
-  faCubes,
-  faCode,
-  faPaintBrush,
-  faVideo, 
+import { 
   faLocationDot,
   faPhone,
   faEnvelope,
@@ -89,9 +81,28 @@ const scrollToTop = () => {
     const card = imageRef.current;
     card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
   };
+
+   const glowRef = useRef(null);
+
+  useEffect(() => {
+    const move = (e) => {
+      if (!glowRef.current) return;
+
+      glowRef.current.style.left = `${e.clientX}px`;
+      glowRef.current.style.top = `${e.clientY}px`;
+    };
+
+    window.addEventListener("mousemove", move);
+
+    return () => {
+      window.removeEventListener("mousemove", move);
+    };
+  }, []);
+
   return (
     <> 
       <section className="hero" id="home">
+          <div className="cursor-glow" ref={glowRef}></div>
         <div className="hero-overlay"></div>
         <div className="hero-inner" data-aos="fade-up"> 
           <div className="hero-content">
@@ -138,68 +149,123 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
         </div>
       </section>
  
-    <section id="about" className="section about" data-aos="fade-up">
-      <div className="about-grid"> 
-        <div className="about-left" data-aos="fade-up">
-          <h2 className="about-title">About Me</h2>
-<p>
-  I’m <b>Aravindan OS</b>, a passionate <b>Frontend Developer and Web Designer</b> with over <b>3+ years of professional experience</b> in crafting responsive, visually engaging, and user-friendly web applications. Currently working at <b>Ideelit Software LLP</b>, I specialize in <b>React.js</b>, <b>CSS</b>, and <b>Photoshop</b>, focusing on building dynamic interfaces that combine creativity with functionality.
-</p>
+   <section id="about" className="profile-showcase">
 
-<p>
-  I began my career as a <b>Web Design Trainee</b> at <b>ARM Infotech</b>, where I gained hands-on experience in <b>UI/UX design</b> and web structuring. Since then, I’ve developed and designed multiple full-fledged websites such as <b>Ideelit.com</b>, <b>123Legal.in</b>, <b>123Boek.com</b>, and <b>123Tute.com</b>, blending clean design principles with performance-driven development.
-</p>
+  <div className="profile-blob profile-blob-one"></div>
+  <div className="profile-blob profile-blob-two"></div>
 
-<p>
-  Beyond web development, I’m a <b>creative thinker</b> with a strong interest in <b>video editing, filmmaking, and visual storytelling</b> — skills that inspire my design approach. My work reflects a mix of <b>technical precision</b> and <b>artistic passion</b>, driven by a desire to deliver seamless digital experiences that stand out.
-</p>
+  <div className="profile-layout">
+
+    {/* LEFT CONTENT */}
+
+    <div
+      className="profile-content"
+      data-aos="fade-right"
+    >
+
+      <span className="profile-tag">
+        ABOUT ME
+      </span>
+
+      <h2 className="profile-heading">
+        Creative
+        <span> Frontend Developer</span>
+        <br />
+        & Web Designer
+      </h2>
+
+      <div className="profile-heading-line"></div>
+
+      <p>
+        I'm <strong>Aravindan OS</strong>, a passionate Frontend Developer
+        with more than <strong>3+ years of experience</strong> building
+        modern, responsive and user-friendly web applications using
+        React.js, HTML5 and CSS3.
+      </p>
+
+      <p>
+        My goal is to transform ideas into beautiful digital experiences.
+        I enjoy creating interfaces that combine elegant visuals,
+        smooth animations and clean code architecture.
+      </p>
+
+      <p>
+        Along with development, I love UI/UX design,
+        Photoshop, Figma, video editing and creative storytelling,
+        helping me build products that are both functional and visually engaging.
+      </p>
+
+      <div className="profile-stats">
+
+        <div className="profile-stat-card">
+          <h3>3+</h3>
+          <span>Years Experience</span>
         </div>
- 
-        <div className="about-right" data-aos="fade-up">
-          <div className="about-card">
-            <h4> Strengths</h4>
-            <ul>
-              <li>
-                <FontAwesomeIcon icon={faLightbulb} /> Creative visual thinker
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faUsers} /> Team collaboration
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faClock} /> Quick learner & punctual
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faCubes} /> Strong problem-solving
-              </li>
-            </ul>
-          </div>
 
-          <div className="about-card" data-aos="fade-up" data-aos-delay="200">
-            <h4> Skills </h4>
-            <ul className="skills-list">
-              <li>
-                <FontAwesomeIcon icon={faCode} /> React.js
-              </li>
-                <li>
-                <FontAwesomeIcon icon={faCode} /> HTML5
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faPaintBrush} /> CSS
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faVideo} /> Premiere Pro
-              </li>
-              <li>
-                <FontAwesomeIcon icon={faPaintBrush} /> Photoshop
-              </li> 
-               <li>
-                <FontAwesomeIcon icon={faPaintBrush} /> Figma
-              </li>
-            </ul>
-          </div>
+        <div className="profile-stat-card">
+          <h3>20+</h3>
+          <span>Projects</span>
         </div>
+
+        <div className="profile-stat-card">
+          <h3>100%</h3>
+          <span>Responsive UI</span>
+        </div>
+
       </div>
-    </section>
+
+    </div>
+
+    {/* RIGHT SIDE */}
+
+    <div
+      className="profile-visual"
+      data-aos="fade-left"
+    >
+
+      <div className="skill-orbit">
+
+        <div className="orbit-ring"></div>
+        <div className="orbit-ring orbit-ring-two"></div>
+
+        <div className="orbit-center">
+
+          <h2>React.js</h2>
+          <span>Developer</span>
+
+        </div>
+
+        <div className="orbit-item orbit-react">
+          React.js
+        </div>
+
+        <div className="orbit-item orbit-html">
+          HTML5
+        </div>
+
+        <div className="orbit-item orbit-css">
+          CSS3
+        </div>
+
+        <div className="orbit-item orbit-figma">
+          Figma
+        </div>
+
+        <div className="orbit-item orbit-photo">
+          Photoshop
+        </div>
+
+        <div className="orbit-item orbit-video">
+          Premiere
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
  
     <section id="experience" className="section experience" data-aos="fade-up">
   <h2>Experience</h2>
@@ -207,7 +273,7 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
     <div className="timeline-item" data-aos="fade-up">
       <h3>Web Designer & Frontend Developer</h3>
       <p>
-        <b>Ideelit Software LLP</b> — <b>October 2023 - May 2026</b><br /><br />
+        <b>Ideelit Software LLP</b> — <b>October 2023 - June 2026</b><br /><br />
         Leading the <b>Frontend & Web Design team</b> and delivering modern,
         scalable, and visually refined interfaces using 
         <b> React.js, CSS, Figma, Photoshop.</b>
@@ -243,66 +309,261 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
         • Foundation in responsive design, grid systems, and branding consistency.
       </p>
     </div>
-     <video
-  ref={imageRef}
-  className="hero-video"
-  src={advideo}
-  autoPlay
-  loop
-  muted
-  playsInline 
-/>
 </div>
 </div>
   </div>
 </section>
- <div className="projects-bg">
-    <section id="projects" className="section projects" data-aos="fade-up">
-  <h2 className="section-title" data-aos="fade-down">Featured Projects</h2>
-  <div className="projects-grid">
-    <div className="project-card" data-aos="fade-up" data-aos-delay="100">
-      <div className="project-card-inner">
-        <h3>
-          <a href="https://ideelit.com" target="_blank" rel="noopener noreferrer">
-            Ideelit.com
-          </a>
-        </h3>
+
+<section id="projects" className="portfolio-showcase">
+
+    <div className="portfolio-header">
+
+        <span>Portfolio</span>
+
+        <h2>Featured Personal Projects</h2>
+
         <p>
-          Full React.js website featuring layered animations, a clean layout, and a responsive experience. 
+            Two professional websites completely designed and developed by me
+            using React.js, modern UI, responsive layouts and clean frontend architecture.
         </p>
-      </div>
+
     </div>
 
-    <div className="project-card" data-aos="fade-up" data-aos-delay="200">
-      <div className="project-card-inner">
-        <h3>
-          <a href="https://123legal.in" target="_blank" rel="noopener noreferrer">
-            123Legal.in
-          </a>
-        </h3>
-        <p>
-          End-to-end web platform with integrated PDF viewer and article system, styled from Photoshop mockups.
-        </p>
-      </div>
-    </div> 
+    <div className="portfolio-grid">
 
-    <div className="project-card" data-aos="fade-up" data-aos-delay="400">
-      <div className="project-card-inner">
-        <h3>
-          <a href="https://123tute.com" target="_blank" rel="noopener noreferrer">
-            123Tute.com
-          </a>
-        </h3>
-        <p>
-          Educational React layout built with reusable components and scalable structure.
-        </p>
-      </div>
+        <div className="portfolio-card portfolio-trust">
+
+            <div className="portfolio-light"></div>
+
+            <div className="portfolio-index">
+                01
+            </div>
+
+            <div className="portfolio-content">
+
+                <span className="portfolio-badge">
+                    NGO Website
+                </span>
+
+                <h3>Aarvian Trust</h3>
+
+                <p>
+                    A complete trust website featuring donation pages,
+                    volunteer registration, responsive layouts,
+                    modern animations and professional UI.
+                </p>
+
+                <div className="portfolio-stack">
+
+                    <span>React.js</span>
+                    <span>CSS3</span>
+                    <span>Responsive</span>
+                    <span>Animations</span>
+
+                </div>
+
+                <a
+                    href="https://aarvian-trust.vercel.app"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="portfolio-button"
+                >
+                    Visit Website →
+                </a>
+
+            </div>
+
+        </div>
+
+        <div className="portfolio-card portfolio-photo">
+
+            <div className="portfolio-light"></div>
+
+            <div className="portfolio-index">
+                02
+            </div>
+
+            <div className="portfolio-content">
+
+                <span className="portfolio-badge">
+                    Photography Portfolio
+                </span>
+
+                <h3>ONAIR Photography</h3>
+
+                <p>
+                    Premium photography portfolio showcasing wedding,
+                    events and cinematic photography with elegant
+                    UI and smooth animations.
+                </p>
+
+                <div className="portfolio-stack">
+
+                    <span>React.js</span>
+                    <span>CSS3</span>
+                    <span>Framer Motion</span>
+                    <span>Modern UI</span>
+
+                </div>
+
+                <a
+                    href="https://onair-photography.vercel.app"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="portfolio-button"
+                >
+                    Visit Website →
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
-  </div>
+
 </section>
 
- 
-      <section id="education" className="section education" data-aos="fade-up">
+
+ <section id="projects" className="portfolio-projects">
+
+  <div className="portfolio-projects-header" data-aos="fade-down">
+    <span>MY WORK</span>
+    <h2>Featured Projects</h2>
+    <p>
+      A collection of professional websites designed and developed using
+      React.js with modern UI, responsive layouts, clean code architecture,
+      and interactive user experiences.
+    </p>
+  </div>
+
+  <div className="portfolio-projects-grid">
+
+    <div
+      className="portfolio-project-card"
+      data-aos="zoom-in-up"
+      data-aos-delay="100"
+    >
+      <div className="portfolio-project-shine"></div>
+
+      <div className="portfolio-project-count">01</div>
+
+      <div className="portfolio-project-content">
+
+        <div className="portfolio-project-label">
+          Corporate Website
+        </div>
+
+        <h3>Ideelit.com</h3>
+
+        <p>
+          Modern business website built using React.js featuring responsive
+          layouts, reusable components, animations and premium UI design.
+        </p>
+
+        <div className="portfolio-project-tech">
+          <span>React.js</span>
+          <span>CSS3</span>
+          <span>Responsive</span>
+        </div>
+
+        <a
+          href="https://ideelit.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="portfolio-project-button"
+        >
+          Visit Website →
+        </a>
+
+      </div>
+    </div>
+
+    <div
+      className="portfolio-project-card"
+      data-aos="zoom-in-up"
+      data-aos-delay="250"
+    >
+      <div className="portfolio-project-shine"></div>
+
+      <div className="portfolio-project-count">02</div>
+
+      <div className="portfolio-project-content">
+
+        <div className="portfolio-project-label">
+          Legal Platform
+        </div>
+
+        <h3>123Legal.in</h3>
+
+        <p>
+          Professional legal platform with article management, PDF viewing,
+          responsive UI and scalable frontend architecture.
+        </p>
+
+        <div className="portfolio-project-tech">
+          <span>React.js</span>
+          <span>CSS</span>
+          <span>UI Design</span>
+        </div>
+
+        <a
+          href="https://123legal.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="portfolio-project-button"
+        >
+          Visit Website →
+        </a>
+
+      </div>
+    </div>
+
+    <div
+      className="portfolio-project-card"
+      data-aos="zoom-in-up"
+      data-aos-delay="400"
+    >
+      <div className="portfolio-project-shine"></div>
+
+      <div className="portfolio-project-count">03</div>
+
+      <div className="portfolio-project-content">
+
+        <div className="portfolio-project-label">
+          Education Platform
+        </div>
+
+        <h3>123Tute.com</h3>
+
+        <p>
+          Educational platform with reusable React components, responsive
+          design and clean user interface focused on learning.
+        </p>
+
+        <div className="portfolio-project-tech">
+          <span>React.js</span>
+          <span>Animations</span>
+          <span>Frontend</span>
+        </div>
+
+        <a
+          href="https://123tute.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="portfolio-project-button"
+        >
+          Visit Website →
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+  <section id="education" className="section education" data-aos="fade-up">
         <h2 className="section-title">Education</h2>
         <div className="edu-cards">
           <div className="edu-card" data-aos="fade-up">
@@ -321,7 +582,6 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
           </div>
         </div>
       </section>
-  </div>
       <section id="contact" className="section contact" data-aos="fade-up">
         <div className="contact-grid">
             <div className="contact-vector" data-aos="fade-up">
@@ -361,7 +621,7 @@ challenging opportunity to leverage my skills and experience in a dynamic tech e
   </div>
 )}
       <footer className="footer">
-        <p>© 2026 O.S. Aravindan | Designed & Developed with React.js</p>
+       <p>© 2026 All Rights Reserved. Designed & Developed by O.S. Aravindan</p>
       </footer>
     </>
   );
