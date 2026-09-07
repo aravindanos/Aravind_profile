@@ -1363,6 +1363,8 @@ box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 
 
 
+
+
 /* ***********************new css ************************************* */
 
 /*==================================================
@@ -1847,17 +1849,14 @@ scale(1.08);
 
 font-size:34px;
 
-margin-bottom:8px;
+margin-bottom: 0px;
 
 }
 
 .orbit-center span{
 
-font-size:14px;
-
-letter-spacing:2px;
-
-text-transform:uppercase;
+font-size:24px;
+ 
 
 }
 
@@ -2535,7 +2534,7 @@ font-size:95px;
 
 font-weight:800;
 
-color:#e5e7eb;
+color:#9cbcfc;
 
 opacity:.8;
 
@@ -2971,7 +2970,7 @@ width:40%;
     right:25px;
     top:20px;
     font-size:85px;
-    color:#e5e7eb;
+    color:#9cbcfc;
     font-weight:800;
 }
 
